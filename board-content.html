@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>게시판 </title>
+   <style>
+          fieldset {   width : 400px;          }
+          pre {  font-size : 14px;
+	 font-family :'Times New Roman'; 	}
+
+           #snd { float : right; }
+              body{margin: auto;
+    width: 60%;
+  
+    padding: 10px;}
+    </style>
+</head>
+<body>
+   <h1><img src='/img/bookshelf.png' width=30%>    </h1>
+  <h1>작성하기</h1>
+   <form action="./cgi-bin/board-save.py" method="get">
+       <fieldset>
+           <input id = "iid"  type="hidden" name="id" value = "MINJUN">  
+           <input type="hidden" name="ttype" value="I">
+                     <input type="hidden" name="page" value="1">
+           <pre> <label for="nameid">  작성자 :   </label>  <input id = "nameid"  type="text" name="nm" value = "MINJUN">              
+           </pre>
+           <pre> <label for="titleid">  제목 :   </label>      <input id = "titleid"  type="text" name="title" style="width:500px">     </pre>
+           <pre>  <textarea id = "conid"  name="content" cols="80" rows ="20"></textarea></pre>
+           <pre id = "snd">  <a href="/cgi-bin/board-list.py"><input type=button value='돌아가기'></a>   <input type="submit" name="send" value="등록" > </pre>
+       </fieldset>
+  </form>
+</body>
+</html>

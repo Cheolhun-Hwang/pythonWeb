@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>회원등록</title>
+         
+<script src="jquery-3.2.1.js"></script>
+<script src="jquery-migrate-1.4.1.min.js"></script>
+<script>
+      $(document).ready(function () {
+
+            $('form').on('submit', function () {
+
+                   if ($(this).find('#iid').val() == '')
+                     { alert('input id');
+                       return false;     
+                     };
+                   if ($(this).find('#pw').val() == '')
+                     { alert('input password');
+                       return false;     
+                     };
+
+                   if ($(this).find('#nm').val() == '') 
+                     { alert('input name');
+                       return false;     
+                     };
+                   if ($(this).find('#tp').val() == '')
+                     { alert('input telephone');
+                       return false;     
+                     };
+
+                   if ($(this).find('#ad').val() == '') 
+                     { alert('input address');
+                       return false;     
+                     };
+                                
+           });
+      });
+</script>
+   <style>
+ fieldset {         width : 400px;        }
+
+ pre { font-size : 14px;
+       font-family : 'Times New Roman' }
+       body{
+           margin: 0 auto;
+    width:30%;
+   
+    padding: 10px;
+           
+       }
+</style>
+
+</head>
+<body>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/img/bookshelf.png" width=70%>
+
+
+<form action="/cgi-bin/registrations.py" method="get">
+
+<fieldset>
+<pre> <label for="iid"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id :        </label>         <input id = "iid"  type="text" name="id">     </pre>
+<pre> <label for = "pw"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; password : </label>    <input id = "pw" type="password" name="password"> </pre>
+<pre> <label for = "nm">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name :     </label>      <input  id = "nm" type="text" name="name"> </pre>
+<pre> <label for = "tp"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; telephone :</label>    <input id = "tp" type="text" name="telephone"> </pre>
+<pre> <label for = "ad">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address : </label>      <input id = "ad" type="text" name="address" > </pre>
+
+<pre>                                       <a href='login.html'><input type='button' value='취소'></a>     <input type="submit" name="send" value="가입" > </pre>
+
+</fieldset>
+
+</form> </body> </html>
+
+         
+   
